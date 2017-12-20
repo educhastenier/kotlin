@@ -105,8 +105,6 @@ fun PsiClass.resolveToDescriptor(
 }
 
 private fun PsiElement.getJavaDescriptorResolver(resolutionFacade: ResolutionFacade): JavaDescriptorResolver? {
-    if (!ProjectRootsUtil.isInProjectOrLibraryClassFile(this)) return null
-
     return resolutionFacade.tryGetFrontendService(this, JavaDescriptorResolver::class.java)
 }
 
