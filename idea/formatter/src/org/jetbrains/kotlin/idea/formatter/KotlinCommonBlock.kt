@@ -775,7 +775,11 @@ private fun getWrappingStrategyForItemList(wrapType: Int, itemTypes: TokenSet, w
     val itemWrap = Wrap.createWrap(wrapType, wrapFirstElement)
     return object : WrappingStrategy {
         override fun getWrap(childElement: ASTNode): Wrap? {
-            return if (childElement.elementType in itemTypes) itemWrap else null
+            return if (childElement.elementType in itemTypes ||
+                       getPrevWithoutWhitespace(childElement)?.elementType in itemTypes)
+                itemWrap
+            else
+                null
         }
     }
 }
