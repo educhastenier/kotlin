@@ -4,6 +4,6 @@ class Test {
 
 fun test() {
     val abc = Test().foo()?.foo({ "str" }).foo {
-        <caret>
-    }
+                <caret>
+            }
 }

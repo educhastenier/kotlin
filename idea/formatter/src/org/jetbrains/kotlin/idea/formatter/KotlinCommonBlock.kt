@@ -118,11 +118,12 @@ abstract class KotlinCommonBlock(
             // Create fake ".something" or "?.something" block here, so child indentation will be
             // relative to it when it starts from new line (see Indent javadoc).
 
-            val indent = if (settings.kotlinCustomSettings.CONTINUATION_INDENT_FOR_CHAINED_CALLS)
-                Indent.getContinuationWithoutFirstIndent()
+            val indentType = if (settings.kotlinCustomSettings.CONTINUATION_INDENT_FOR_CHAINED_CALLS)
+                Indent.Type.CONTINUATION
             else
-                Indent.getNormalIndent()
+                Indent.Type.NORMAL
             val isNonFirstChainedCall = operationBlockIndex > 0 && isCallBlock(nodeSubBlocks[operationBlockIndex - 1])
+            val indent = Indent.getIndent(indentType, false, isNonFirstChainedCall)
             val wrap = if ((settings.kotlinCommonSettings.WRAP_FIRST_METHOD_IN_CALL_CHAIN || isNonFirstChainedCall) &&
                            canWrapCallChain(node))
                 Wrap.createWrap(settings.kotlinCommonSettings.METHOD_CALL_CHAIN_WRAP, true)
