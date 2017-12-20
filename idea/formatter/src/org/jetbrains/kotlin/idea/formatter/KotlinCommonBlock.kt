@@ -720,10 +720,15 @@ private fun hasErrorElementBefore(node: ASTNode): Boolean {
 
 /**
  * Suppress indent for binary expressions when there is a block higher in the tree that forces
- * its indent to children ('if' condition or elvis).
+ * its indent to children ('if' condition or elvis). Also suppress indent in string concatenations.
  */
 private fun ASTNode.suppressBinaryExpressionIndent(): Boolean {
     var psi = psi.parent as? KtBinaryExpression ?: return false
+    if ((psi.left is KtStringTemplateExpression || psi.left.let { it is KtBinaryExpression && it.right is KtStringTemplateExpression }) &&
+        (psi.right is KtStringTemplateExpression || psi.right.let { it is KtBinaryExpression && it.left is KtStringTemplateExpression })
+        ) {
+        return true
+    }
     while (psi.parent is KtBinaryExpression) {
         psi = psi.parent as KtBinaryExpression
     }

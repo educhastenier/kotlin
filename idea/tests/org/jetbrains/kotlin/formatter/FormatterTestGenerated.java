@@ -872,6 +872,12 @@ public class FormatterTestGenerated extends AbstractFormatterTest {
             doTest(fileName);
         }
 
+        @TestMetadata("StringConcat.after.kt")
+        public void testStringConcat() throws Exception {
+            String fileName = KotlinTestUtils.navigationMetadata("idea/testData/formatter/StringConcat.after.kt");
+            doTest(fileName);
+        }
+
         @TestMetadata("SuperListIndent.after.kt")
         public void testSuperListIndent() throws Exception {
             String fileName = KotlinTestUtils.navigationMetadata("idea/testData/formatter/SuperListIndent.after.kt");
