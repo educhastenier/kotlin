@@ -41,7 +41,7 @@ import kotlin.reflect.KClass
 // Since IDEA 2017.1, it's possible to have inspection severity "No highlighting, only fix"
 // thus making the original purpose useless.
 // The class still can be used, if you want to create a pair for existing intention with additional checker
-abstract class IntentionBasedInspection<TElement : PsiElement>(
+abstract class IntentionBasedInspection<TElement : PsiElement> private constructor(
         private val intentionInfos: List<IntentionBasedInspection.IntentionData<TElement>>,
         protected open val problemText: String?
 ) : AbstractKotlinInspection() {
