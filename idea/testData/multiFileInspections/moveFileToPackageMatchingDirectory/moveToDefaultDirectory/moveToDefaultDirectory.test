@@ -1,0 +1,5 @@
+{
+  "mainFile": "source/test.kt",
+  "inspectionClass": "org.jetbrains.kotlin.idea.refactoring.move.changePackage.PackageDirectoryMismatchInspection",
+  "intentionText": "Move file to source root"
+}

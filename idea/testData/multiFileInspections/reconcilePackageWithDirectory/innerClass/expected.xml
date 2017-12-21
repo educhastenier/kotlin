@@ -1,0 +1,16 @@
+<problems>
+    <problem>
+        <file>dependency.kt</file>
+        <line>1</line>
+        <entry_point TYPE="file" FQNAME="dependency.kt" />
+        <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Package name does not match containing directory</problem_class>
+        <description>Package directive doesn't match file location</description>
+    </problem>
+    <problem>
+        <file>test.kt</file>
+        <line>1</line>
+        <entry_point TYPE="file" FQNAME="test.kt" />
+        <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Package name does not match containing directory</problem_class>
+        <description>Package directive doesn't match file location</description>
+    </problem>
+</problems>

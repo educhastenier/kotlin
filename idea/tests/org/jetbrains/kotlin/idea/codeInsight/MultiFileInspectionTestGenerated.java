@@ -65,4 +65,52 @@ public class MultiFileInspectionTestGenerated extends AbstractMultiFileInspectio
         String fileName = KotlinTestUtils.navigationMetadata("idea/testData/multiFileInspections/mismatchedProjectAndDirectory/mismatchedProjectAndDirectory.test");
         doTest(fileName);
     }
+
+    @TestMetadata("moveFileToPackageMatchingDirectory/moveToDefaultDirectory/moveToDefaultDirectory.test")
+    public void testMoveFileToPackageMatchingDirectory_moveToDefaultDirectory_MoveToDefaultDirectory() throws Exception {
+        String fileName = KotlinTestUtils.navigationMetadata("idea/testData/multiFileInspections/moveFileToPackageMatchingDirectory/moveToDefaultDirectory/moveToDefaultDirectory.test");
+        doTest(fileName);
+    }
+
+    @TestMetadata("moveFileToPackageMatchingDirectory/moveToNonDefaultDirectory/moveToNonDefaultDirectory.test")
+    public void testMoveFileToPackageMatchingDirectory_moveToNonDefaultDirectory_MoveToNonDefaultDirectory() throws Exception {
+        String fileName = KotlinTestUtils.navigationMetadata("idea/testData/multiFileInspections/moveFileToPackageMatchingDirectory/moveToNonDefaultDirectory/moveToNonDefaultDirectory.test");
+        doTest(fileName);
+    }
+
+    @TestMetadata("moveFileToPackageMatchingDirectory/packageMatchesDirectory/packageMatchesDirectory.test")
+    public void testMoveFileToPackageMatchingDirectory_packageMatchesDirectory_PackageMatchesDirectory() throws Exception {
+        String fileName = KotlinTestUtils.navigationMetadata("idea/testData/multiFileInspections/moveFileToPackageMatchingDirectory/packageMatchesDirectory/packageMatchesDirectory.test");
+        doTest(fileName);
+    }
+
+    @TestMetadata("reconcilePackageWithDirectory/addQuotation/addQuotation.test")
+    public void testReconcilePackageWithDirectory_addQuotation_AddQuotation() throws Exception {
+        String fileName = KotlinTestUtils.navigationMetadata("idea/testData/multiFileInspections/reconcilePackageWithDirectory/addQuotation/addQuotation.test");
+        doTest(fileName);
+    }
+
+    @TestMetadata("reconcilePackageWithDirectory/changeToDefaultPackage/changeToDefaultPackage.test")
+    public void testReconcilePackageWithDirectory_changeToDefaultPackage_ChangeToDefaultPackage() throws Exception {
+        String fileName = KotlinTestUtils.navigationMetadata("idea/testData/multiFileInspections/reconcilePackageWithDirectory/changeToDefaultPackage/changeToDefaultPackage.test");
+        doTest(fileName);
+    }
+
+    @TestMetadata("reconcilePackageWithDirectory/changeToNonDefaultPackage/changeToNonDefaultPackage.test")
+    public void testReconcilePackageWithDirectory_changeToNonDefaultPackage_ChangeToNonDefaultPackage() throws Exception {
+        String fileName = KotlinTestUtils.navigationMetadata("idea/testData/multiFileInspections/reconcilePackageWithDirectory/changeToNonDefaultPackage/changeToNonDefaultPackage.test");
+        doTest(fileName);
+    }
+
+    @TestMetadata("reconcilePackageWithDirectory/innerClass/innerClass.test")
+    public void testReconcilePackageWithDirectory_innerClass_InnerClass() throws Exception {
+        String fileName = KotlinTestUtils.navigationMetadata("idea/testData/multiFileInspections/reconcilePackageWithDirectory/innerClass/innerClass.test");
+        doTest(fileName);
+    }
+
+    @TestMetadata("reconcilePackageWithDirectory/packageMatchesDirectory/packageMatchesDirectory.test")
+    public void testReconcilePackageWithDirectory_packageMatchesDirectory_PackageMatchesDirectory() throws Exception {
+        String fileName = KotlinTestUtils.navigationMetadata("idea/testData/multiFileInspections/reconcilePackageWithDirectory/packageMatchesDirectory/packageMatchesDirectory.test");
+        doTest(fileName);
+    }
 }

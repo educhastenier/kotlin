@@ -1,0 +1,5 @@
+{
+  "mainFile": "test.kt",
+  "inspectionClass": "org.jetbrains.kotlin.idea.refactoring.move.changePackage.PackageDirectoryMismatchInspection",
+  "intentionText": "Change file's package to ''"
+}
